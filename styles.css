@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Vina Sans', sans-serif;
+}
+body{
+    background: linear-gradient(#e66465, #9198e5) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+}
+.wrapper {
+    width: 65vmin;
+    height: 70vmin;
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: #293447;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3)
+}
+
+.game-details {
+    color: whitesmoke;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 20px 27px;
+    display: flex;
+    justify-content: space-around;
+}
+.game-board {
+    width: 100%;
+    height: 100%;
+    background: #212837;
+    display: grid;
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+.game-board .food {
+    background: red;
+}
+.game-board .head {
+    background: lightseagreen;
+}
+.controls {
+    display: none;
+    justify-content: space-between;
+}
+.controls i {
+    color: aquamarine;
+    padding: 25px 0;
+    text-align: center;
+    cursor: pointer;
+    width: calc(100% / 4);
+    font-size: 1.2rem;
+    border-right: 1px solid #171b26;
+}
+@media screen and (max-width: 800px) {
+    .wrapper {
+        width: 90vmin;
+        height: 115vmin;
+    }
+    .game-details {
+        font-size: 1rem;
+        padding: 15px 27px;
+    }
+    .controls {
+        display: flex;
+    }
+    .controls i {
+        padding: 15px 0;
+        font-size: 1rem;
+    }
+}
